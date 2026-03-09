@@ -89,7 +89,7 @@ export WECHAT_APP_SECRET="your_app_secret"
 
 下面是一段可直接运行的端到端示例：会先下载一张图片到本地，然后在 Markdown 的 `cover` 和正文图片中都引用该本地文件，最后发布到公众号草稿箱。
 
-```python
+````python
 from wechat_publisher.engine import WechatPublisher
 import os
 from urllib.request import Request, urlopen
@@ -130,7 +130,7 @@ media_id = bot.publish_article(
     app_secret=os.getenv("WECHAT_APP_SECRET"),
 )
 print("published media_id:", media_id)
-```
+````
 
 ## 本地图片上传（相对路径）
 
