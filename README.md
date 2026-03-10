@@ -1,5 +1,7 @@
 # wechat_publisher
 
+> GitHub 地址：[https://github.com/Systems-Intelligent-Lab/wechat_publisher](https://github.com/Systems-Intelligent-Lab/wechat_publisher)
+
 将 Markdown 一键渲染为 **微信公众号可直接粘贴的富文本 HTML**，并支持发布到公众号「草稿箱」。
 
 ## 功能特性
@@ -23,13 +25,35 @@
 
 ## 安装
 
-在项目根目录：
+### 方式一：直接通过 GitHub URL 安装（推荐）
+
+无需克隆仓库，一行命令即可安装最新版本：
 
 ```bash
+pip install git+https://github.com/Systems-Intelligent-Lab/wechat_publisher.git
+```
+
+安装指定分支或 Tag：
+
+```bash
+# 安装指定分支
+pip install git+https://github.com/Systems-Intelligent-Lab/wechat_publisher.git@main
+
+# 安装指定 Tag（如 v1.0.0）
+pip install git+https://github.com/Systems-Intelligent-Lab/wechat_publisher.git@v1.0.0
+```
+
+### 方式二：克隆后本地安装
+
+先克隆仓库，再在项目根目录安装：
+
+```bash
+git clone https://github.com/Systems-Intelligent-Lab/wechat_publisher.git
+cd wechat_publisher
 pip install .
 ```
 
-（开发时也可以用可编辑安装）
+（开发时推荐使用可编辑安装，代码修改后无需重新安装）
 
 ```bash
 pip install -e .
@@ -188,10 +212,6 @@ python -m unittest -v tests/test_render_unittest.py
   - 检查 `WECHAT_APP_ID/WECHAT_APP_SECRET`
   - 检查公众号后台的 IP 白名单配置
 
-## 发布准备清单（建议）
+## 贡献与反馈
 
-- **补齐项目信息**：将 `pyproject.toml` 中的 `description/readme/version` 等信息完善为你期望发布到 PyPI 的最终内容
-- **写版本记录**：建议新增 `CHANGELOG.md`
-- **打包前自检**：
-  - `python -m unittest -v tests/test_render_unittest.py`
-  - 在无 Node 环境的机器上验证 Docker 兜底路径
+欢迎提交 Issue 或 PR：[https://github.com/Systems-Intelligent-Lab/wechat_publisher](https://github.com/Systems-Intelligent-Lab/wechat_publisher)
